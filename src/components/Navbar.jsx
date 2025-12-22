@@ -6,7 +6,7 @@ export default function Navbar() {
   useEffect(() => {
     const handleScroll = () => {
       // If user scrolls more than 100px, hide the navbar
-      if (window.scrollY > 50) {
+      if (window.scrollY > 500) {
         setIsVisible(false);
       } else {
         setIsVisible(true);
@@ -19,7 +19,7 @@ export default function Navbar() {
 
   return (
     <nav 
-      className={`fixed top-0 left-0 w-full z-[100] flex items-center h-[164px] transition-all duration-200 ease-in-out ${
+      className={`fixed top-0 left-0 w-full z-[100] flex items-center h-[164px] transition-all duration-500 ease-in-out ${
         isVisible ? 'translate-y-0 opacity-100' : '-translate-y-full opacity-0'
       }`}
     >
@@ -50,10 +50,10 @@ export default function Navbar() {
         }}
       >
         <ul className="flex gap-24 text-white font-semibold text-lg tracking-widest uppercase">
-          <li className="hover:text-[#5227FF] cursor-pointer transition-all">Home</li>
-          <li className="hover:text-[#5227FF] cursor-pointer transition-all">About Us</li>
-          <li className="hover:text-[#5227FF] cursor-pointer transition-all">Event Gallery</li>
-          <li className="hover:text-[#5227FF] cursor-pointer transition-all">Contact</li>
+          <li className="hover:text-[##99399E] cursor-pointer transition-all">Home</li>
+          <li className="hover:text-[##99399E] cursor-pointer transition-all">About Us</li>
+          <li className="hover:text-[##99399E] cursor-pointer transition-all">Event Gallery</li>
+          <li className="hover:text-[##99399E] cursor-pointer transition-all">Contact</li>
         </ul>
       </div>
     </nav>
