@@ -21,7 +21,7 @@ function App() {
 
         {/* 1. Top Label - Now pushed below navbar */}
         <div className="mb-8 animate-fade-in">
-          <span className="text-[#A855F7] text-sm font-bold tracking-[0.4em] uppercase">
+          <span className="text-[#99399E] text-sm font-bold tracking-[0.4em] uppercase">
             Get In Touch
           </span>
         </div>
@@ -62,7 +62,7 @@ function App() {
 
       {/* Suble Scroll Hook Animation */}
       <div className="flex flex-col items-center justify-center py-0 opacity-50">
-        <div className="text-gray-500 text-[10px] tracking-[0.5em] uppercase mb-4 animate-pulse">
+        <div className="text-gray-500 text-[15px] tracking-[0.5em] uppercase mb-4 animate-pulse">
           Scroll to Connect
         </div>
         <div className="h-12 w-[1px] bg-gradient-to-b from-transparent via-[#5227FF] to-transparent animate-bounce"></div>

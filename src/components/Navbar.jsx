@@ -5,7 +5,6 @@ export default function Navbar() {
 
   useEffect(() => {
     const handleScroll = () => {
-      // If user scrolls more than 100px, hide the navbar
       if (window.scrollY > 500) {
         setIsVisible(false);
       } else {
@@ -16,6 +15,8 @@ export default function Navbar() {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  const navLinks = ["Home", "About Us", "Event Gallery", "Contact"];
 
   return (
     <nav 
@@ -49,12 +50,29 @@ export default function Navbar() {
           borderRadius: '32px'
         }}
       >
-        <ul className="flex gap-24 text-white font-semibold text-lg tracking-widest uppercase">
-          <li className="hover:text-[##99399E] cursor-pointer transition-all">Home</li>
-          <li className="hover:text-[##99399E] cursor-pointer transition-all">About Us</li>
-          <li className="hover:text-[##99399E] cursor-pointer transition-all">Event Gallery</li>
-          <li className="hover:text-[##99399E] cursor-pointer transition-all">Contact</li>
-        </ul>
+        <ul className="flex gap-12 text-white font-semibold text-lg tracking-widest uppercase">
+  {navLinks.map((link) => (
+    <li 
+      key={link} 
+      className="group relative px-6 py-2 flex items-center justify-center"
+    >
+      {/* The Transparent Pill Bubble Background with Border */}
+      <div 
+        className="absolute inset-0 scale-0 opacity-0 group-hover:scale-100 group-hover:opacity-100 transition-all duration-300 ease-out"
+        style={{
+          background: 'rgba(177, 170, 177, 0.126)', // #99399E at 20% opacity
+          border: '1px solid rgba(185, 176, 176, 0.46)', // Your requested border
+          borderRadius: '32px'
+        }}
+      ></div>
+      
+      {/* The Nav Text */}
+      <span className="relative z-10 cursor-pointer transition-all duration-300 group-hover:text-[#99399E] group-hover:scale-110 block">
+        {link}
+      </span>
+    </li>
+  ))}
+</ul>
       </div>
     </nav>
   );
