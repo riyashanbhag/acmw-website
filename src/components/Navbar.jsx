@@ -28,7 +28,7 @@ export default function Navbar() {
       {/* 1. THE LOGO */}
       <div className="pl-12 flex-shrink-0">
         <img 
-          src="/image-removebg-preview.png" 
+          src="/acmw.png" 
           alt="ACM-W Logo" 
           className="w-[164px] h-[164px] object-contain"
         />
