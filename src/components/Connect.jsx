@@ -50,11 +50,16 @@ export default function Connect() {
                         </div>
 
                         {/* Email */}
-                        <div className="flex items-center gap-6">
-                            <img src={MailIcon} alt="LinkedIn" className="w-8 h-8 invert group-hover:invert-0" />
+                        <div className="flex items-center gap-6 group">
+                            <img src={MailIcon} alt="Email" className="w-8 h-8 invert group-hover:invert-0" />
                             <div>
                                 <p className="text-white font-bold text-base">Mail Us:</p>
-                                <p className="text-gray-400 text-sm">abc@gmail.com</p>
+                                <a
+                                    href="mailto:acm.manipal@gmail.com"
+                                    className="text-gray-400 text-sm hover:text-[#99399E] transition-colors duration-300"
+                                >
+                                    acm.manipal@gmail.com
+                                </a>
                             </div>
                         </div>
                     </div>
