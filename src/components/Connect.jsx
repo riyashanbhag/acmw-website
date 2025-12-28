@@ -70,49 +70,119 @@ export default function Connect() {
             <div className="flex-1 flex flex-col items-center gap-10 pt-16">
                 <div className="flex gap-10">
 
-                    {/* LinkedIn Link */}
+                    {/* LinkedIn Link - Glassmorphism with Purple Glow (Blue on Hover) */}
                     <a
                         href="https://www.linkedin.com/company/acm-w-manipal/"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="group"
+                        className="group social-circle-linkedin"
                     >
-                        <div className="w-60 h-60 rounded-full bg-[#394146] flex flex-col items-center justify-center text-white transition-all duration-300 hover:bg-[#8FAEE4] hover:text-black cursor-pointer hover:scale-110 shadow-xl">
-                            <img src={LinkedInIcon} alt="LinkedIn" className="w-12 h-12 invert group-hover:invert-0" />
+                        <div 
+                            className="w-60 h-60 rounded-full flex flex-col items-center justify-center text-white transition-all duration-500 hover:scale-110 cursor-pointer"
+                            style={{
+                                background: 'rgba(153, 57, 158, 0.15)',
+                                backdropFilter: 'blur(10px)',
+                                WebkitBackdropFilter: 'blur(10px)',
+                                border: '1px solid rgba(153, 57, 158, 0.3)',
+                                boxShadow: '0 0 25px rgba(153, 57, 158, 0.4)',
+                            }}
+                        >
+                            <img src={LinkedInIcon} alt="LinkedIn" className="w-12 h-12 invert transition-all duration-300" />
                             <span className="text-2xl font-bold mt-2">LinkedIn</span>
                             <span className="text-2xs opacity-60">Let's Connect</span>
                         </div>
                     </a>
 
-                    {/* Instagram Link */}
+                    {/* Instagram Link - Glassmorphism with Purple Glow (Pink on Hover) */}
                     <a
                         href="https://www.instagram.com/acmwmanipal?igsh=MThzMWc5anA4aDd2OA=="
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="group"
+                        className="group social-circle-instagram"
                     >
-                        <div className="w-60 h-60 rounded-full bg-[#394146] flex flex-col items-center justify-center text-white transition-all duration-300 hover:bg-[#CE62A8] hover:text-black cursor-pointer hover:scale-110 shadow-xl">
-                            <img src={InstagramIcon} alt="LinkedIn" className="w-12 h-12 invert group-hover:invert-0" />
+                        <div 
+                            className="w-60 h-60 rounded-full flex flex-col items-center justify-center text-white transition-all duration-500 hover:scale-110 cursor-pointer"
+                            style={{
+                                background: 'rgba(153, 57, 158, 0.15)',
+                                backdropFilter: 'blur(10px)',
+                                WebkitBackdropFilter: 'blur(10px)',
+                                border: '1px solid rgba(153, 57, 158, 0.3)',
+                                boxShadow: '0 0 25px rgba(153, 57, 158, 0.4)',
+                            }}
+                        >
+                            <img src={InstagramIcon} alt="Instagram" className="w-12 h-12 invert transition-all duration-300" />
                             <span className="text-2xl font-bold mt-2">Instagram</span>
                             <span className="text-2xs opacity-60">Share your Ideas</span>
                         </div>
                     </a>
                 </div>
 
-                {/* GitHub Link (Centered below) */}
+                {/* GitHub Link - Glassmorphism with Purple Glow (Orange on Hover) */}
                 <a
                     href="https://github.com/ACMW-Manipal"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="group"
+                    className="group social-circle-github"
                 >
-                    <div className="w-60 h-60 rounded-full bg-[#394146] flex flex-col items-center justify-center text-white transition-all duration-300 hover:bg-[#FFD277] hover:text-black cursor-pointer hover:scale-110 shadow-xl">
-                        <img src={GithubIcon} alt="LinkedIn" className="w-12 h-12 invert group-hover:invert-0" />
+                    <div 
+                        className="w-60 h-60 rounded-full flex flex-col items-center justify-center text-white transition-all duration-500 hover:scale-110 cursor-pointer"
+                        style={{
+                            background: 'rgba(153, 57, 158, 0.15)',
+                            backdropFilter: 'blur(10px)',
+                            WebkitBackdropFilter: 'blur(10px)',
+                            border: '1px solid rgba(153, 57, 158, 0.3)',
+                            boxShadow: '0 0 25px rgba(153, 57, 158, 0.4)',
+                        }}
+                    >
+                        <img src={GithubIcon} alt="GitHub" className="w-12 h-12 invert transition-all duration-300" />
                         <span className="text-2xl font-bold mt-2">GitHub</span>
                         <span className="text-2xs opacity-60">Fork & Contribute</span>
                     </div>
                 </a>
             </div>
+
+            {/* Add animations and hover effects */}
+            <style>{`
+                @keyframes pulse-glow-purple {
+                    0%, 100% { 
+                        box-shadow: 0 0 25px rgba(153, 57, 158, 0.4);
+                    }
+                    50% { 
+                        box-shadow: 0 0 40px rgba(153, 57, 158, 0.6);
+                    }
+                }
+
+                /* Default state - all circles have purple glow with animation */
+                .social-circle-linkedin > div,
+                .social-circle-instagram > div,
+                .social-circle-github > div {
+                    animation: pulse-glow-purple 3s ease-in-out infinite;
+                }
+
+                /* LinkedIn Hover - Blue */
+                .social-circle-linkedin:hover > div {
+                    background: rgba(0, 119, 181, 0.25) !important;
+                    border: 1px solid rgba(0, 119, 181, 0.4) !important;
+                    box-shadow: 0 0 40px rgba(0, 119, 181, 0.7) !important;
+                    animation: none !important;
+                }
+
+                /* Instagram Hover - Pink */
+                .social-circle-instagram:hover > div {
+                    background: rgba(214, 41, 118, 0.25) !important;
+                    border: 1px solid rgba(214, 41, 118, 0.4) !important;
+                    box-shadow: 0 0 40px rgba(214, 41, 118, 0.7) !important;
+                    animation: none !important;
+                }
+
+                /* GitHub Hover - Orange */
+                .social-circle-github:hover > div {
+                    background: rgba(249, 115, 22, 0.25) !important;
+                    border: 1px solid rgba(249, 115, 22, 0.4) !important;
+                    box-shadow: 0 0 40px rgba(249, 115, 22, 0.7) !important;
+                    animation: none !important;
+                }
+            `}</style>
         </section>
     );
 }
