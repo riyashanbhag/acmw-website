@@ -55,10 +55,10 @@ export default function Connect() {
                             <div>
                                 <p className="text-white font-bold text-base">Mail Us:</p>
                                 <a
-                                    href="mailto:acm.manipal@gmail.com"
+                                    href="mailto:acmw.manipal@gmail.com"
                                     className="text-gray-400 text-sm hover:text-[#99399E] transition-colors duration-300"
                                 >
-                                    acm.manipal@gmail.com
+                                    acmw.manipal@gmail.com
                                 </a>
                             </div>
                         </div>
@@ -68,7 +68,7 @@ export default function Connect() {
 
             {/* RIGHT COLUMN: Social Circles (Inverted Triangle) */}
             <div className="flex-1 flex flex-col items-center gap-10 pt-16">
-                <div className="flex gap-10">
+                <div className="flex gap-16">
 
                     {/* LinkedIn Link - Glassmorphism with Purple Glow (Blue on Hover) */}
                     <a
