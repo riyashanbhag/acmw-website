@@ -60,13 +60,15 @@ function App() {
         {/* SECTIONS */}
         <Connect />
         <FAQ />
-        <ContactForm />
+        {/* SECTION: Contact Form - Reduced bottom padding */}
+<div className="pb-3"> 
+  <ContactForm />
+</div>
 
-        {/* Extra space at bottom before footer */}
-        <div className="h-32 shrink-0"></div>
-        
-        {/* 3. Footer moved inside the wrapper or correctly placed at end */}
-        <Footer />
+{/* Reduced the extra spacer from h-32 to h-10 or remove it entirely */}
+<div className="h-1 shrink-0"></div>
+
+<Footer />
       </div>
     </div>
   );
